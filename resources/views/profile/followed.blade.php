@@ -6,7 +6,7 @@
             @foreach($followed as $followe)
                 <div class="col-4">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset('storage/images/'.$followe->user_two->profile->avatar) }}" alt="">
+                        <img class="card-img-top" src="{{ asset('storage/images/avatars/'.$followe->user_two->profile->avatar) }}" alt="">
                         <div class="card-header">
                             <h5 class="">{{ $followe->user_two->name }}</h5>
                         </div>

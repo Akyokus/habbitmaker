@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Friend;
 use App\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
+
+
 
 
     public function add_follow(Profile $profile) {
@@ -101,7 +104,7 @@ class ProfileController extends Controller
      */
     public function edit(Profile $profile)
     {
-        return view('profile.edit', compact($profile));
+        return view('profile.edit', compact('profile'));
     }
 
     /**
@@ -113,7 +116,28 @@ class ProfileController extends Controller
      */
     public function update(Request $request, Profile $profile)
     {
-        //
+        $request->validate([
+            'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'biography' => 'max:300'
+        ]);
+//        dd($request->avatar->getClientOriginalName());
+        if ($request->avatar) {
+            $imageName = hash('sha256', $request->avatar->getClientOriginalName() . time()) . "." .$request->avatar->getClientOriginalExtension();
+            $request->avatar->move(storage_path('app/public/images/avatars'), $imageName);
+            if(Storage::exists('public/images/avatars/' . $profile->avatar)) {
+                Storage::delete('public/images/avatars/' . $profile->avatar);
+            }
+            $profile->avatar = $imageName;
+        }
+
+        if ($request->biography) {
+            $profile->biography = $request->biography;
+        }
+
+        $profile->save();
+
+        return redirect()->back();
+
     }
 
     /**

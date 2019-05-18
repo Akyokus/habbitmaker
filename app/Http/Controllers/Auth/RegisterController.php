@@ -6,6 +6,7 @@ use App\Profile;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -70,7 +71,13 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        $user->profile()->save(new Profile());
+        $profile = new Profile();
+        $avatars = Storage::disk('local')->files('public/images/avatars/default');
+        $avatar = getRandomImage($avatars);
+
+        $profile->avatar = "default/" . $avatar;
+
+        $user->profile()->save($profile);
 
         return $user;
 

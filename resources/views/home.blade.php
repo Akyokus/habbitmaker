@@ -14,7 +14,21 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Sigara Bırakma</h3>
+                            <span class="card-subtitle">muharremkackin</span>
+                            <p class="card-text">Bugün 3. günüm devam etmekte zorlanıyorum</p>
+                        </div>
+                    </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Sigara Bırakma</h3>
+                                <span class="card-subtitle">muharremkackin</span>
+                                <p class="card-text">Bugün 3. günüm devam etmekte zorlanıyorum</p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

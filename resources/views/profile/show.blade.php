@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-4">
                                 <div class="avatar">
-                                    <img src="{{ asset('storage/images/' . $profile->avatar) }}"
+                                    <img src="{{ asset('storage/images/avatars/' . $profile->avatar) }}"
                                          alt="{{ $profile->user->name }}">
                                 </div>
 
