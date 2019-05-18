@@ -32,6 +32,12 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            <ul>
+                <li><a href="{{ route('expertness.create') }}">Uzmanlık Yarat</a></li>
+                <li><a href="{{ route('habbit.create') }}">Alışkanlık Yarat</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 @endsection

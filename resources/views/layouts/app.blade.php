@@ -38,13 +38,13 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profile.show', 107) }}">Ramazan</a>
+                            <a class="nav-link" href="{{ route('profile.show', 53) }}">Ramazan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profile.show', 1) }}">Muharrem</a>
+                            <a class="nav-link" href="{{ route('profile.show', 51) }}">Muharrem</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('profile.show', 2) }}">Mehmet</a>
+                            <a class="nav-link" href="{{ route('profile.show', 52) }}">Mehmet</a>
                         </li>
                         @guest
                             <li class="nav-item">

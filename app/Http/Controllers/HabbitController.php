@@ -113,6 +113,8 @@ class HabbitController extends Controller
             $post->workout_hour = now()->milliseconds;
             $post->save();
         }
+
+        return redirect()->back();
     }
 
     /**

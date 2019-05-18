@@ -49,25 +49,25 @@
                 @endforeach
             </div>
             <div class="col-5">
-                <div class="mbsc-col-sm-12 mbsc-col-md-4">
-                    <div class="mbsc-form-group">
-                        <div class="mbsc-form-group-title">Max days</div>
-                        <div id="demo-max-days"></div>
-                    </div>
-                </div>
+{{--                <div class="mbsc-col-sm-12 mbsc-col-md-4">--}}
+{{--                    <div class="mbsc-form-group">--}}
+{{--                        <div class="mbsc-form-group-title">Max days</div>--}}
+{{--                        <div id="demo-max-days"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
 @endsection
 
 @section('footer')
-    <script src="{{ asset('js/mobiscroll.javascript.min.js') }}"></script>
-    <script>
-        mobiscroll.calendar('#demo-max-days', {
-            display: 'inline',               // Specify display mode like: display: 'bottom' or omit setting to use default
-            select: 1,                       // More info about select: https://docs.mobiscroll.com/4-6-3/javascript/calendar#opt-select
-            headerText: 'Pick up to 5 days',
-            theme: 'ios'// More info about headerText: https://docs.mobiscroll.com/4-6-3/javascript/calendar#opt-headerText
-        });
-    </script>
+{{--    <script src="{{ asset('js/mobiscroll.javascript.min.js') }}"></script>--}}
+{{--    <script>--}}
+{{--        mobiscroll.calendar('#demo-max-days', {--}}
+{{--            display: 'inline',               // Specify display mode like: display: 'bottom' or omit setting to use default--}}
+{{--            select: 1,                       // More info about select: https://docs.mobiscroll.com/4-6-3/javascript/calendar#opt-select--}}
+{{--            headerText: 'Pick up to 5 days',--}}
+{{--            theme: 'ios'// More info about headerText: https://docs.mobiscroll.com/4-6-3/javascript/calendar#opt-headerText--}}
+{{--        });--}}
+{{--    </script>--}}
 @endsection
